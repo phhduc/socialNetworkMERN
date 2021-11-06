@@ -1,0 +1,388 @@
+body{
+    background-color: rgb(243, 243, 243);
+    margin: 0 auto;
+}
+
+/* Login */
+.login{
+    border: 3px solid black;
+    border-radius: 5px;    
+    width: 300px;
+    height: 500px;
+    margin: 5% auto;
+    text-align: center;
+    background-color: white;    
+}
+.name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.login--email{
+    font-size: 20px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.login--password{
+    font-size: 20px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.button--login{
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0 93.5px;
+    background-color: rgb(224, 224, 224);
+}
+.button--login:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+.InfoLogin a{
+    text-decoration: none;
+    color: white;
+}
+
+.InfoLogin .forgotpassword{
+    text-decoration: none;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+.InfoLogin .login--signup{
+    text-decoration: none;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+.login--signup:hover {
+    color: white;   
+    border: 2px solid black;
+    background-color: black; 
+    border-radius: 5px;
+    transition: 1s;
+}
+.dontaccount{
+    margin-top: 220px;
+}
+
+/* signup */
+.signup{
+    border: 3px solid black;
+    border-radius: 5px;    
+    width: 300px;
+    height: 500px;
+    margin: 5% auto;
+    text-align: center;
+    background-color: white;
+}
+.signup--email{
+    font-size: 20px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.signup--username{
+    font-size: 20px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.signup--password{
+    font-size: 20px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.button--signup{
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0 93.5px;
+    background-color: rgb(224, 224, 224);
+}
+.button--signup:hover{
+    background-color: black;
+    transition: 1s;
+}
+.InfoSignup a{
+    text-decoration: none;
+    color: white;
+}
+
+/* taskbar */
+.TaskBar{
+    display: flex;
+    list-style: none;
+    border-bottom: 2px solid black;   
+    height: 30px;
+    background-color: white;
+    padding: 10px;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+}
+.taskbar--name{
+    margin: 0px auto;
+}
+.taskbar--name a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.Search input{
+    height: 20px;
+    text-align: center;
+    background-color: rgb(243, 243, 243);
+}
+.Search input:hover{
+    background-color: white;
+    transition: 1s;
+}
+.homeProfile{
+    margin: 0px auto;
+    letter-spacing: 2px;
+}
+.homeProfile--home:hover{
+    background-color: lightblue;
+    transition: 0.5s;
+    border-radius: 5px;
+    padding: 5px;
+}
+.homeProfile--myprofile:hover{
+    background-color: lightblue;
+    transition: 0.5s;
+    border-radius: 5px;
+    padding: 5px;
+}
+.homeProfile a{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+.homeProfile--myprofile{
+    padding: 2px;
+    margin-left: 10px;
+}
+.homeProfile--home{
+    padding: 2px;
+}
+
+
+/* myprofile */
+.myprofile--main{
+    padding: 20px;
+    height: 200px;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+.myprofile--avatar{
+    border: 1px solid black;
+    border-radius: 180px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.myprofile--info{    
+    list-style: none;
+    margin: 0 auto;
+}
+
+.myprofile--info a{
+    text-decoration: none;
+    color: black;
+    
+}
+.myprofile--setting{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.myprofile--setting:hover{
+    transition: 1s;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 5px solid black;
+}
+
+
+/* Setting */
+.listsetting{
+    width: 800px;
+    height: 500px;
+    border: 2px solid black;  
+    border-radius: 5px;
+    margin: 5rem auto;
+    background-color: white;
+}
+
+
+.taskbarprofile{
+    border-right: 2px solid black;
+    float: left;
+    width: 230px;
+    height: 500px;
+}
+.edtprofile:hover{
+    background-color: black;
+    color: white;
+    border: 7px solid black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.cgpass:hover{
+    background-color: black;
+    color: white;
+    border: 7px solid black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.taskbarprofile a{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+.taskbarprofile ul li{
+    list-style: none;
+    height: 2rem;   
+}
+
+
+
+/* Edit Profile */
+.editprofile--main{
+    margin: 15px auto;
+}
+.editprofile--name{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 267px;
+}
+.editprofile--name input{
+    height: 20px;
+    width: 200px;
+    border-radius: 5px;
+    margin-left: 30px;    
+}
+.editprofile--sex{
+    display: flex;
+    font-size: 20px;
+    padding: 5px; 
+    margin-left: 264px;
+    font-weight: 600;
+}
+.editprofile--sex select{
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-left: 94.5px;
+    height: 25px;
+    width: 208px;
+}
+.editprofile--button{
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 19.5rem;
+    transition: 0.5s;
+}
+.editprofile--button:hover{
+    background-color: black;
+    color: white; 
+}
+.listsetting .border{
+    background-color: black;
+    color: white;
+    border: 7px solid black;
+    border-radius: 10px;
+}
+.listsetting .animation:hover{
+    background-color: black;
+    color: white;
+    border: 7px solid black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+
+/* Change password */
+.changepassword--main{
+    margin: 19px;
+    margin-left: 250px;
+    font-weight: 600;
+}
+.changepassword--password{
+    font-size: 20px;
+}
+.changepassword--password input{
+    height: 25px;
+    border-radius: 5px;
+    margin-left: 124px;
+    width: 200px;
+}
+.changepassword--newpassword{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.changepassword--newpassword input{
+    border-radius: 5px;
+    margin-left: 104px;
+    height: 25px;
+    width: 200px;
+}
+.changepassword--confirmpassword{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.changepassword--confirmpassword input{
+    border-radius: 5px;
+    margin-left: 43px;
+    height: 25px;
+    width: 200px;
+}
+.changepassword--button{
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 20.5rem;
+    transition: 0.5s;
+}
+.changepassword--button:hover{
+    background-color: black;
+    color: white; 
+}
+
+.taskbarsetting .border{
+    background-color: black;
+    color: white;
+    border: 7px solid black;
+    border-radius: 10px;
+}
+.taskbarsetting .animation:hover{
+    background-color: black;
+    color: white;
+    border: 7px solid black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.forgotpassword{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.forgotpassword:hover{
+    text-decoration: none;
+    font-style: italic;
+    font-style: italic;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    transition: 0.3s;            
+}
+
+
