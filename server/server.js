@@ -1,7 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors=require('cors');
-const singup=require("./routers/singup")
+
+const authRouter = require('./routers/auth')
+
 require('dotenv').config();
 const app = express();
 const port = 8080;
@@ -16,10 +18,7 @@ mongoose.connect(process.env.DB_URL,{useNewUrlParser: true, useUnifiedTopology:t
     console.log(err);
 });
 
-app.get('/', function(req, res){
-    res.send("Hello");
-})
-app.use("/singup", singup)
+app.use('/auth', authRouter)
 app.listen(port, function(){
     console.log("APP running on port " + port);
 })

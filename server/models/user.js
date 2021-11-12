@@ -5,26 +5,24 @@ const UserSchema = new mongoose.Schema(
     {
         username:{
             type:String,
-            required:true,
-            min: 3,
-            max: 20,
+            require: true,
             unique: true
         },
         password:{
             type: String,
-            required: true,
+            require: true,
             min: 6
         },
         fullname:{
-            type: String,
-            required:true
+            require: true,
+            type: String
         },
         gender:{
-            type: Boolean,
-            required: true
+            type: Boolean
         },
         birthDate:{
             type: Date,
+            default: Date.now
         },
         avatar:{
             type: String,
@@ -42,8 +40,6 @@ const UserSchema = new mongoose.Schema(
         following:[{type:mongoose.Types.ObjectId,ref:'user'}], 
         followers:[{type:mongoose.Types.ObjectId,ref:'user'}], 
         friends:[{type:mongoose.Types.ObjectId, ref:'user'}]
-    },{
-        timestamps: true
     }
 );
 module.exports= mongoose.model('user', UserSchema)
