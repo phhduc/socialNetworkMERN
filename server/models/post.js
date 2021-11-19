@@ -1,24 +1,21 @@
 const mongoose = require("mongoose");
-const PostShema = new Schema({
+const PostSchema = new Schema({
     authorID:{
-        type: String,
-        reqired:true
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'user'
     },
     avatarAuthor:{
-        type: String,
-        required: true
+        type: String
     },
     title:{
-        type: String,
-        required: true
+        type: String
     },
     description:{
-        type:String,
-        required: true
+        type:String
     },
     picture:{
-        type:[String],
-        default: []
+        type:String,
+        default: ""
     },
     likes:[{type: mongoose.Types.ObjectId, ref:'user'}],
     likeCount:{
