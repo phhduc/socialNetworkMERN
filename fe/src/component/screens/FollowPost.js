@@ -170,7 +170,7 @@ const FollowPost = () => {
                                 >
                                     <input
                                         type="text"
-                                        placeholder="add a commnet"
+                                        placeholder="thêm bình luận"
                                     />
                                 </form>
                             </div>

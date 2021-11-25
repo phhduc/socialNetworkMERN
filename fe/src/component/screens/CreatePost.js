@@ -58,13 +58,13 @@ const CreatePost = () => {
                 textAlign: "center"
             }}
         >
-            <input type="text" placeholder="title"
+            <input type="text" placeholder="tiêu đề"
                 value={title} onChange={e => setTitle(e.target.value)} />
-            <input type="text" placeholder="body"
+            <input type="text" placeholder="nội dung"
                 value={body} onChange={e => setBody(e.target.value)} />
             <div className="file-field input-field">
                 <div className="btn">
-                    <span>Upload Image</span>
+                    <span>Tải ảnh lên</span>
                     <input type="file"
                         onChange={e => setImage(e.target.files[0])}
                     />
@@ -77,7 +77,7 @@ const CreatePost = () => {
             <button className="waves-effect waves-light btn"
                 onClick={() => postDetails()}
             >
-                Submit post
+                Đăng bài
             </button>
 
         </div>

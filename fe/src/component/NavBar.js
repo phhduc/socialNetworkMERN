@@ -7,9 +7,9 @@ const NavBar = () => {
     const renderList = () => {
         if (state) {
             return [
-                <li key="3"><a href="/profile">Profile</a></li>,
-                <li key="4"><a href="/createpost">Create Post</a></li>,
-                <li key="6"><a href="/followpost">Following Post</a></li>,
+                <li key="3"><a href="/profile">Hồ sơ</a></li>,
+                <li key="4"><a href="/createpost">Tạo bài mới</a></li>,
+                <li key="6"><a href="/followpost">Đang theo dõi</a></li>,
                 <li key="5">
                     <button className="btn"
                     onClick={()=>{
@@ -24,8 +24,8 @@ const NavBar = () => {
 
         } else {
             return [
-                <li key="1"><a href="/login">Login</a></li>,
-                <li key="2"><a href="/signup">Sign Up</a></li>
+                <li key="1"><a href="/login">Đăng kí</a></li>,
+                <li key="2"><a href="/signup">Đăng nhập</a></li>
             ]
         }
     }
