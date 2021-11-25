@@ -68,6 +68,29 @@ router.put('/unfollow', requireLogin, (req, res) => {
         })
     })
 })
+//api change password
+router.put('/changepass', requireLogin, (req, res)=>{
+    User.findByIdAndUpdate(req.user._id, {password: req.body.newPass})
+    .select("-password")
+    .exec((err, result)=>{
+        if(err){
+            return res.status(422).json({error: err})
+        }
+        res.json(result)
+    })
+})
+
+//api change info
+router.put('/changeinfo', requireLogin, (req, res)=>{
+    User.findByIdAndUpdate(req.user._id, req.body.update)
+    .select("-password")
+    .exec((err, result)=>{
+        if(err){
+            return res.status(422).json({error: err})
+        }
+        return res.json(result)
+    })
+})
 
 // exports
 module.exports = router
