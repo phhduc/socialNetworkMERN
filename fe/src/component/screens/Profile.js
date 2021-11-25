@@ -62,7 +62,7 @@ const Profile = () => {
                         transform:"translate(-50%, -50%)"
                         }}
                         onClick={()=>UpdateAvatar()} 
-                        >update avatar
+                        > Đổi ảnh đại diện
                     </button>
                 </div>
                 <div>
@@ -75,13 +75,13 @@ const Profile = () => {
                         justifyContent: "space-between"
                     }}>
                         <div>
-                            <h6>{post.length} posts</h6>
+                            <h6>{post.length} bài đăng </h6>
                         </div>
                         <div>
-                            <h6>{state ? state.followers.length : "0"} followers</h6>
+                            <h6>{state ? state.followers.length : "0"} người theo dõi </h6>
                         </div>
                         <div>
-                            <h6>{state ? state.following.length : "0"} following</h6>
+                            <h6>{state ? state.following.length : "0"} đang theo dõi</h6>
                         </div>
                     </div>
                 </div>

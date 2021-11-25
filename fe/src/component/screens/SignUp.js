@@ -53,7 +53,7 @@ const SignUp = () => {
                 if (data.error) {
                     return M.toast({ html: data.error })
                 } else {
-                    M.toast({ html: "saved success" })
+                    M.toast({ html: " đăng ký thành công " })
                     navigate('/login')
                 }
             })
@@ -71,7 +71,7 @@ const SignUp = () => {
                 <h2>App name</h2>
                 <input
                     type="text"
-                    placeholder="name"
+                    placeholder=" tên đăng nhập "
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
@@ -83,13 +83,13 @@ const SignUp = () => {
                 />
                 <input
                     type="password"
-                    placeholder="password"
+                    placeholder=" mật khẩu "
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
                 <div className="file-field input-field">
                     <div className="btn">
-                        <span>Upload Image</span>
+                        <span>Ảnh đại diện</span>
                         <input type="file"
                             onChange={e => setAvarta(e.target.files[0])}
                         />
@@ -101,10 +101,10 @@ const SignUp = () => {
                 </div>
                 <button className="waves-effect waves-light btn"
                     onClick={e => PostData()}>
-                    Sign Up
+                    Đăng ký
                 </button>
                 <h6>
-                    <Link to="/login">Already have an account?</Link>
+                    <Link to="/login">Bạn đã có tài khoản?</Link>
                 </h6>
             </div>
         </div>

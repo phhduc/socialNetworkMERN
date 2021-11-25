@@ -116,7 +116,7 @@ const Home = () => {
         <div className="home">
             <a href ="/createpost"
             class="btn waves-effect waves-light" type="submit" name="action"
-            style={{width:"100%"}}>Create Post
+            style={{width:"100%"}}>Tạo bài đăng
                 <i class="material-icons right">send</i>
             </a>
             {
@@ -158,13 +158,13 @@ const Home = () => {
                                     :
                                     <i className="material-icons" onClick={() => likePost(item._id)}>thumb_up</i>
                                 }
-                                <h6> {item.likes.length} likes</h6>
+                                <h6> {item.likes.length} lượt thích</h6>
                                 <h6>{item.title}</h6>
                                 <p>{item.body}</p>
                                 {
                                     item.comments.map(i => {
                                         return (
-                                            <h6 key={i._id}><span style={{ fontWeight: "500" }}>{i.postBy.name} said:</span>{i.text}</h6>
+                                            <h6 key={i._id}><span style={{ fontWeight: "500" }}>{i.postBy.name} đã bình luận:</span>{i.text}</h6>
                                         )
                                     })
                                 }
@@ -177,7 +177,7 @@ const Home = () => {
                                 >
                                     <input
                                         type="text"
-                                        placeholder="add a commnet"
+                                        placeholder="thêm bình luận"
                                     />
                                 </form>
                             </div>

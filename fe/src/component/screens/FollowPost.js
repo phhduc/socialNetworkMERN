@@ -127,7 +127,7 @@ const FollowPost = () => {
                                         borderRadius: "80px",
                                         float:"left"
                                         }}
-                                    src={state ? state.avatar : ""}
+                                    src={item.postBy.avatar}
                                     alt="avatar" />
                             <h5 style={{lineHeight:"60px", position:"relative"}}><Link to={ item.postBy._id == state._id?"/profile":"/profile/"+item.postBy._id} >{item.postBy.name} </Link>
                             { 
@@ -151,13 +151,13 @@ const FollowPost = () => {
                                     :
                                     <i className="material-icons" onClick={() => likePost(item._id)}>thumb_up</i>
                                 }
-                                <h6> {item.likes.length} likes</h6>
+                                <h6> {item.likes.length} lượt thích</h6>
                                 <h6>{item.title}</h6>
                                 <p>{item.body}</p>
                                 {
                                     item.comments.map(i =>{
                                         return (
-                                            <h6 key={i._id}><span style={{fontWeight:"500"}}>{i.postBy.name} said:</span>{i.text}</h6>
+                                            <h6 key={i._id}><span style={{fontWeight:"500"}}>{i.postBy.name} đã bình luận:</span>{i.text}</h6>
                                         )
                                     })
                                 }                                
@@ -170,7 +170,7 @@ const FollowPost = () => {
                                 >
                                     <input
                                         type="text"
-                                        placeholder="add a commnet"
+                                        placeholder="thêm bình luận"
                                     />
                                 </form>
                             </div>

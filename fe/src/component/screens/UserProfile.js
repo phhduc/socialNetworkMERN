@@ -98,24 +98,24 @@ const UserProfile = () => {
                                 justifyContent: "space-between"
                             }}>
                                 <div>
-                                    <h6>{userProfile.posts.length} posts</h6>
+                                    <h6>{userProfile.posts.length} bài đăng</h6>
                                 </div>
                                 <div>
-                                    <h6>{userProfile.user.followers.length} followers</h6>
+                                    <h6>{userProfile.user.followers.length} người theo dõi </h6>
                                 </div>
                                 <div>
-                                    <h6>{userProfile.user.following.length} following</h6>
+                                    <h6>{userProfile.user.following.length} đang theo dõi </h6>
                                 </div>
                             </div>
                             {showFollow ?
                                 <button className="waves-effect waves-light btn"
                                     onClick={e => followUser()}>
-                                    Follow
+                                    Theo dõi
                                 </button>
                                 :
                                 <button className="waves-effect waves-light btn"
                                     onClick={e => unfollowUser()}>
-                                    Unfollow
+                                    Bỏ theo dõi
                                 </button>
                             }
                         </div>

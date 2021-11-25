@@ -31,7 +31,7 @@ const Login=()=>{
                 localStorage.setItem("jwt", data.token)
                 localStorage.setItem("user", JSON.stringify(data.user))
                 dispatch({type:"USER", payload:data.user})
-                M.toast({html: "Successfully"})
+                M.toast({html: "đăng nhập thành công"})
                 navigate("/")
             }
         })
@@ -48,15 +48,15 @@ const Login=()=>{
                 />
                 <input
                 type="password"
-                placeholder="password"
+                placeholder="mật khẩu"
                 value={password}
                 onChange={e=>setPassword(e.target.value)}/>
                 <button className="waves-effect waves-light btn"
                 onClick={e => PostData()}>
-                    Login
+                    Đăng Nhập
                 </button>
                 <h6>
-                    <Link to="/signup">Don't have an account?</Link>
+                    <Link to="/signup"> Bạn chưa có tài khoản?</Link>
                 </h6>
 
             </div>
