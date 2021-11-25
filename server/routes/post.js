@@ -6,8 +6,8 @@ const Post = mongoose.model("Post")
 
 // all Post
 router.get('/allpost',requireLogin, (req, res) =>{
-    Post.find()
-    .populate("postBy", "_id name")
+    Post.find().sort({_id:-1}).limit(100)
+    .populate("postBy", "_id name avatar")
     .populate("comments.postBy", "_id name avatar")
     .then(posts => {
         res.json({posts})
@@ -17,8 +17,8 @@ router.get('/allpost',requireLogin, (req, res) =>{
 
 //api post of follow
 router.get('/followpost',requireLogin, (req, res) =>{
-    Post.find({postBy:{$in:req.user.following}})
-    .populate("postBy", "_id name")
+    Post.find({postBy:{$in:req.user.following}}).sort({_id:-1}).limit(100)
+    .populate("postBy", "_id name avatar")
     .populate("comments.postBy", "_id name avatar")
     .then(posts => {
         res.json({posts})

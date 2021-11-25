@@ -132,7 +132,7 @@ const Home = () => {
                                         borderRadius: "80px",
                                         float: "left"
                                     }}
-                                    src={state ? state.avatar : ""}
+                                    src={item.postBy.avatar}
                                     alt="avatar" />
                                 <h5 style={{ lineHeight: "60px", position: "relative" }}>
                                     <Link to={item.postBy._id == state._id ? "/profile" : "/profile/" + item.postBy._id}
