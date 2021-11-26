@@ -49,7 +49,7 @@ const Profile = () => {
                 borderBottom: "1px solid grey"
             }}>
                 <div style={{position:"relative"}} className="div-avatar">
-                    <img style={{ width: "160px", height: "160px", borderRadius: "80px", zIndex:"0" }}
+                    <img style={{ width: "160px", height: "160px", borderRadius: "80px", zIndex:"0",objectFit:'cover' }}
                         src={state ? state.avatar : ""}
                         alt="avatar" />
                     <button className="btn waves-effect waves-light edit-avatar" type="submit" name="action" 

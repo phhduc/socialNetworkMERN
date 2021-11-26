@@ -84,7 +84,7 @@ const UserProfile = () => {
                         borderBottom: "1px solid grey"
                     }}>
                         <div>
-                            <img style={{ width: "160px", height: "160px", borderRadius: "80px" }}
+                            <img style={{ width: "160px", height: "160px", borderRadius: "80px", objectFit:"cover" }}
                                 src={userProfile.user.avatar}
                                 alt="avatar" />
                         </div>
