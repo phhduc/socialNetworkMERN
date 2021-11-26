@@ -1,0 +1,16 @@
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+    "username" : "phhudc",
+    "password" : "ctk43dlu",
+    "fullname" : "Pham Huy Duc",
+    "gender": true
+}
+######################################
+GET http://localhost:8080/singup 
+Content-Type: application/json
+
+{
+    "username": "phhduc"
+}
