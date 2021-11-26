@@ -124,8 +124,9 @@ const FollowPost = () => {
                                         margin:"10px",
                                         width: "50px", 
                                         height: "50px", 
-                                        borderRadius: "80px",
-                                        float:"left"
+                                        borderRadius: "25px",
+                                        float:"left",
+                                        objectFit:'cover'
                                         }}
                                     src={item.postBy.avatar}
                                     alt="avatar" />
