@@ -115,9 +115,9 @@ const Home = () => {
     return (
         <div className="home">
             <a href ="/createpost"
-            class="btn waves-effect waves-light" type="submit" name="action"
+            className="btn waves-effect waves-light" type="submit" name="action"
             style={{width:"100%"}}>Tạo bài đăng
-                <i class="material-icons right">send</i>
+                <i className="material-icons right">send</i>
             </a>
             {
                 data.map((item) => {

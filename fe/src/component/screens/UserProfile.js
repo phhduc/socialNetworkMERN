@@ -5,9 +5,11 @@ import { useParams } from 'react-router-dom'
 const UserProfile = () => {
     const [userProfile, setProfile] = useState(null)
     const { state, dispatch } = useContext(userContext);
+    console.log(state)
     const { userid } = useParams();
-    const [showFollow, setFollow] = useState(state?!state.following.includes(userid):true)
-    const userLogin = JSON.parse(localStorage.getItem("user"))
+    const [showFollow, setFollow] = useState(() => {
+        return state?!state.following.includes(userid):true;
+    })
     useEffect(() => {
         fetch(`/api/user/${userid}`, {
             headers: {
@@ -16,7 +18,7 @@ const UserProfile = () => {
             }
         }).then(res => res.json())
         .then(result => {
-            setFollow(result.user.followers.includes(userLogin._id)) 
+            setFollow(state?!state.following.includes(userid):true)
             setProfile(result)
         })
         .catch(err => console.log(err))
@@ -32,7 +34,7 @@ const UserProfile = () => {
             body: JSON.stringify({ followid: userid })
         }).then(res => res.json())
             .then(result => {
-                dispatch({ type: "UPDATE", payload: { following: result.following, followers: result.followers } })
+                dispatch({ type: "UPDATE", payload: { following: result.following, followers: result.followers }})
                 localStorage.setItem("user", JSON.stringify(result))
                 setProfile(prevState => {
                     return {

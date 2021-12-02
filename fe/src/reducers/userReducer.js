@@ -13,5 +13,14 @@ export const reducer = (state, action)=>{
             following: action.payload.following
         }
     }
+    if(action.type==="UPDATEPIC"){
+        return{
+            ...state,
+            avatar:action.payload
+        }
+    }
+    if(action.type==="REFRESH"){
+        return {...state}
+    }
     return state
 };
