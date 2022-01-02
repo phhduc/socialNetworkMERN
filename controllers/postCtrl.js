@@ -23,7 +23,7 @@ const postCtrl = {
             const { content, images } = req.body
 
             if(images.length === 0)
-            return res.status(400).json({msg: "Please add your photo."})
+            return res.status(400).json({msg: "Thêm cái ảnh cho vui."})
 
             const newPost = new Posts({
                 content, images, user: req.user._id
@@ -31,7 +31,7 @@ const postCtrl = {
             await newPost.save()
 
             res.json({
-                msg: 'Created Post!',
+                msg: 'Đã tạo bài đăng thành công.',
                 newPost: {
                     ...newPost._doc,
                     user: req.user
@@ -83,7 +83,7 @@ const postCtrl = {
             })
 
             res.json({
-                msg: "Updated Post!",
+                msg: "Cập nhật bài đăng!",
                 newPost: {
                     ...post._doc,
                     content, images
@@ -96,15 +96,15 @@ const postCtrl = {
     likePost: async (req, res) => {
         try {
             const post = await Posts.find({_id: req.params.id, likes: req.user._id})
-            if(post.length > 0) return res.status(400).json({msg: "You liked this post."})
+            if(post.length > 0) return res.status(400).json({msg: "Bạn đã thích rồi, like gì lắm thế."})
 
             const like = await Posts.findOneAndUpdate({_id: req.params.id}, {
                 $push: {likes: req.user._id}
             }, {new: true})
 
-            if(!like) return res.status(400).json({msg: 'This post does not exist.'})
+            if(!like) return res.status(400).json({msg: 'Bài đăng hiện không tồn tại.'})
 
-            res.json({msg: 'Liked Post!'})
+            res.json({msg: 'Đã thích!'})
 
         } catch (err) {
             return res.status(500).json({msg: err.message})
@@ -117,9 +117,9 @@ const postCtrl = {
                 $pull: {likes: req.user._id}
             }, {new: true})
 
-            if(!like) return res.status(400).json({msg: 'This post does not exist.'})
+            if(!like) return res.status(400).json({msg: 'Bài đăng hiện không tồn tại.'})
 
-            res.json({msg: 'UnLiked Post!'})
+            res.json({msg: 'hết thích!'})
 
         } catch (err) {
             return res.status(500).json({msg: err.message})
@@ -152,7 +152,7 @@ const postCtrl = {
                 }
             })
 
-            if(!post) return res.status(400).json({msg: 'This post does not exist.'})
+            if(!post) return res.status(400).json({msg: 'Bài đăng hiện không tồn tại.'})
 
             res.json({
                 post
@@ -190,7 +190,7 @@ const postCtrl = {
             await Comments.deleteMany({_id: {$in: post.comments }})
 
             res.json({
-                msg: 'Deleted Post!',
+                msg: 'Xóa bài!',
                 newPost: {
                     ...post,
                     user: req.user
@@ -204,15 +204,15 @@ const postCtrl = {
     savePost: async (req, res) => {
         try {
             const user = await Users.find({_id: req.user._id, saved: req.params.id})
-            if(user.length > 0) return res.status(400).json({msg: "You saved this post."})
+            if(user.length > 0) return res.status(400).json({msg: "Bạn đã lưu bài."})
 
             const save = await Users.findOneAndUpdate({_id: req.user._id}, {
                 $push: {saved: req.params.id}
             }, {new: true})
 
-            if(!save) return res.status(400).json({msg: 'This user does not exist.'})
+            if(!save) return res.status(400).json({msg: 'Người dùng không tồn tại.'})
 
-            res.json({msg: 'Saved Post!'})
+            res.json({msg: 'Đã lưu!'})
 
         } catch (err) {
             return res.status(500).json({msg: err.message})
@@ -224,9 +224,9 @@ const postCtrl = {
                 $pull: {saved: req.params.id}
             }, {new: true})
 
-            if(!save) return res.status(400).json({msg: 'This user does not exist.'})
+            if(!save) return res.status(400).json({msg: 'Người dùng không tồn tại..'})
 
-            res.json({msg: 'unSaved Post!'})
+            res.json({msg: 'Không lưu nữa!'})
 
         } catch (err) {
             return res.status(500).json({msg: err.message})

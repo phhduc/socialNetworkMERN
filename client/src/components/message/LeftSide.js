@@ -84,7 +84,7 @@ const LeftSide = () => {
         <>
             <form className="message_header" onSubmit={handleSearch} >
                 <input type="text" value={search}
-                placeholder="Enter to Search..."
+                placeholder="Bạn tỉm gì đó."
                 onChange={e => setSearch(e.target.value)} />
 
                 <button type="submit" style={{display: 'none'}}>Search</button>

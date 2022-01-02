@@ -26,7 +26,7 @@ const CardHeader = ({post}) => {
 
     const handleCopyLink = () => {
         //navigator.clipboard.writeText(`${BASE_URL}/post/${post._id}`)
-        navigator.clipboard.writeText(`/post/${post._id}`)
+        navigator.clipboard.writeText(`https://social-network-dlu.herokuapp.com/post/${post._id}`)
     }
 
     return (

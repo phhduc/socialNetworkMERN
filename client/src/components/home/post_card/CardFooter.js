@@ -110,7 +110,7 @@ const CardFooter = ({post}) => {
             </div>
 
             {
-                //isShare && <ShareModal url={`${BASE_URL}/post/${post._id}`} theme={theme} />
+                isShare && <ShareModal url={`https://social-network-dlu.herokuapp.com/post/${post._id}`} theme={theme} />
                 
             }
         </div>
